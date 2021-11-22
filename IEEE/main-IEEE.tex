@@ -1,0 +1,87 @@
+% !TeX spellcheck = en_US
+
+% \documentclass[10pt,journal,compsoc]{IEEEtran}
+% \documentclass[conference,compsoc]{IEEEtran}
+\documentclass[10pt, conference, letterpaper]{IEEEtran}
+% keep IEEEtran.cls at the same path
+
+
+% 自定义符号
+\input{_marks}
+
+% 必备包
+\input{_packages}
+
+
+% correct bad hyphenation here
+% 手动调节特定单词在行尾如何断开
+\hyphenation{op-tical net-works semi-conduc-tor}
+
+
+\begin{document}
+
+
+
+
+
+% //* 标题
+% \title{Joint Request Dispatching and Resource Scheduling in Mobile Edge Computing}
+\title{XXXXXX}
+
+
+% \input{_author}
+
+
+
+
+
+
+
+
+
+% make the title area
+\maketitle
+
+
+
+
+\input{_abstract} % no keywords
+
+% For peer review papers, you can put extra information on the cover
+% page as needed:
+% \ifCLASSOPTIONpeerreview
+% \begin{center} \bfseries EDICS Category: 3-BBND \end{center}
+% \fi
+%
+% For peerreview papers, this IEEEtran command inserts a page break and
+% creates the second title. It will be ignored for other modes.
+\IEEEpeerreviewmaketitle
+
+
+
+
+
+\input{_introduction}
+
+\input{_system_model}
+
+\input{_conclusion}
+
+\input{_related_work}
+
+\input{_acknowledgement}
+
+
+%================reference========================
+%\scriptsize
+
+\footnotesize
+\bibliographystyle{IEEEtran}
+\bibliography{reference, reference-3gpp}
+%================reference========================
+
+
+% that's all folks
+\end{document}
+
+

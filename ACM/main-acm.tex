@@ -1,0 +1,119 @@
+
+
+% \documentclass[sigconf]{acmart}  % 用于出版，包含版权信息等内容
+\documentclass[sigconf,authorversion,nonacm]{acmart}  %! 用于投稿，用于manuscript
+
+%* =======================================================
+%%
+%% \BibTeX command to typeset BibTeX logo in the docs
+% \AtBeginDocument{%
+%   \providecommand\BibTeX{{%
+%     \normalfont B\kern-0.5em{\scshape i\kern-0.25em b}\kern-0.8em\TeX}}}
+
+%% Rights management information.  This information is sent to you
+%% when you complete the rights form.  These commands have SAMPLE
+%% values in them; it is your responsibility as an author to replace
+%% the commands and values with those provided to you when you
+%% complete the rights form.
+
+
+%! ================copyright信息，投稿一定注释掉====================
+% \setcopyright{none} %* 关闭copyright的显示
+% 参考https://tex.stackexchange.com/questions/21536/how-to-remove-the-copyright-box-on-a-paper-that-uses-the-acm-sig-alternate-cls-c
+
+% \setcopyright{acmcopyright}
+% \copyrightyear{2018}
+% \acmYear{2018}
+% \acmDOI{10.1145/1122445.1122456}
+
+% These commands are for a PROCEEDINGS abstract or paper.
+% \acmConference[Woodstock '18]{Woodstock '18: ACM Symposium on Neural
+%   Gaze Detection}{June 03--05, 2018}{Woodstock, NY}
+% \acmBooktitle{Woodstock '18: ACM Symposium on Neural Gaze Detection,
+%   June 03--05, 2018, Woodstock, NY}
+% \acmPrice{15.00}
+% \acmISBN{978-1-4503-XXXX-X/18/06}
+%! ================================================================
+
+%%
+%% Submission ID.
+%% Use this when submitting an article to a sponsored event. You'll
+%% receive a unique submission ID from the organizers
+%% of the event, and this ID should be used as the parameter to this command.
+%%\acmSubmissionID{123-A56-BU3}
+
+%%
+%% The majority of ACM publications use numbered citations and
+%% references.  The command \citestyle{authoryear} switches to the
+%% "author year" style.
+%%
+%% If you are preparing content for an event
+%% sponsored by ACM SIGGRAPH, you must use the "author year" style of
+%% citations and references.
+%% Uncommenting
+%% the next command will enable that style.
+%%\citestyle{acmauthoryear}
+%* =======================================================
+
+
+
+% 自定义符号
+\input{_marks}
+
+% 必备包
+\input{_packages}
+
+
+% correct bad hyphenation here
+% 手动调节特定单词在行尾如何断开
+% \hyphenation{op-tical net-works semi-conduc-tor}
+
+
+\begin{document}
+
+
+
+
+
+% * 标题
+% \title{Joint Request Dispatching and Resource Scheduling in Mobile Edge Computing}
+\title{Latex template for ACM Manuscript}
+
+%* 作者
+% \input{_author}
+
+
+\input{_abstract} % no keywords
+
+
+% make the title area 
+\maketitle
+
+
+
+
+
+\input{_introduction}
+
+\input{_system_model}
+
+\input{_conclusion}
+
+\input{_related_work}
+
+\input{_acknowledgement}
+
+
+%================reference========================
+%\scriptsize
+
+\footnotesize
+\bibliographystyle{ACM-Reference-Format}
+\bibliography{reference, reference-3gpp}
+%================reference========================
+
+
+% that's all folks
+\end{document}
+
+

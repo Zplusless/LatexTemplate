@@ -1,0 +1,73 @@
+
+
+%============packages used in this article====================
+% 调整字体颜色
+\usepackage{color, xcolor}
+
+% 数学公式
+\usepackage{amsmath}
+
+% 证明
+\usepackage{amsthm}
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}{Lemma}
+% \newtheorem{proof}{Proof}[section]
+
+
+
+% 使用array
+\usepackage{array}
+
+% 美化表格
+% http://ctan.cs.uu.nl/macros/latex/contrib/booktabs/booktabs.pdf
+\usepackage{booktabs}
+
+% 允许使用对号
+\usepackage{amssymb}
+
+% 双栏布局最后一行对齐
+%\usepackage{flushend}
+
+
+% 引用显示为红色
+% \usepackage[colorlinks,linkcolor=red,anchorcolor=red,citecolor=red]{hyperref}
+% \usepackage[numbers,sort&compress]{natbib} 
+
+
+% 使用\begin{figure}[H]不让浮动体乱跑
+\usepackage{float}
+
+% 使用图片
+% 图片文件路径
+\usepackage[pdftex]{graphicx} 
+\graphicspath{{graphics/},{graphics/authors/}}
+
+% 子图
+\usepackage{subfigure}
+
+% *** CITATION PACKAGES ***
+%
+\ifCLASSOPTIONcompsoc
+% IEEE Computer Society needs nocompress option
+% requires cite.sty v4.0 or later (November 2003)
+\usepackage[nocompress]{cite}
+\else
+% normal IEEE
+\usepackage{cite}
+\fi
+
+
+
+% For Algorithm
+\makeatletter
+\newif\if@restonecol
+\makeatother
+\let\algorithm\relax
+\let\endalgorithm\relax
+\usepackage[linesnumbered,ruled,vlined]{algorithm2e} %[ruled,vlined]{
+\usepackage{algpseudocode}
+\renewcommand{\algorithmicrequire}{\textbf{Input:}}  % Use Input in the format of Algorithm
+\renewcommand{\algorithmicensure}{\textbf{Output:}} % Use Output in the format of Algorithm
+
+
+%=============================================================
