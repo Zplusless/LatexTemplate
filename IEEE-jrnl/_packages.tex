@@ -89,6 +89,21 @@
 
 
 
+% ***=====================表格相关========================
+%* 美化表格
+% http://ctan.cs.uu.nl/macros/latex/contrib/booktabs/booktabs.pdf
+\usepackage{booktabs}
+
+%* 表格允许跨行合并
+\usepackage{multirow}
+
+% *表格内换行
+% \makecell[居中情况]{第1行内容 \\ 第2行内容 \\ 第3行内容 ...}
+% 只需要在换行的地方键入 \textbackslash \textbackslash 即可实现。[居中情况] 包括 r，c，l，分别表示靠右、居中、靠左。
+\usepackage{makecell}
+
+
+
 
 % ***=====================IEEE journal关于图片的用法========================
 
@@ -290,6 +305,16 @@
 % systems. The latest version and documentation can be obtained at:
 % http://www.ctan.org/pkg/url
 % Basically, \url{my_url_here}.
+%* 优化url断行的显示,URL中出现'_'也不用加'\'
+\usepackage{url}
+%* 下面内容可以使换行更灵活 https://blog.csdn.net/qq_38558554/article/details/105496028
+% \def\UrlBreaks{\do\A\do\B\do\C\do\D\do\E\do\F\do\G\do\H\do\I\do\J
+% \do\K\do\L\do\M\do\N\do\O\do\P\do\Q\do\R\do\S\do\T\do\U\do\V
+% \do\W\do\X\do\Y\do\Z\do\[\do\\\do\]\do\^\do\_\do\`\do\a\do\b
+% \do\c\do\d\do\e\do\f\do\g\do\h\do\i\do\j\do\k\do\l\do\m\do\n
+% \do\o\do\p\do\q\do\r\do\s\do\t\do\u\do\v\do\w\do\x\do\y\do\z
+% \do\.\do\@\do\\\do\/\do\!\do\_\do\|\do\;\do\>\do\]\do\)\do\,
+% \do\?\do\'\do+\do\=\do\#}
 
 
 
