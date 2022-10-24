@@ -71,13 +71,39 @@
 % 允许使用对号
 \usepackage{amssymb}
 
+%* ===================================
+% % 自动设置\ie \etc \eg
+% 参考https://stackoverflow.com/questions/3282319/correct-way-to-define-macros-etc-ie-in-latex
+\usepackage{xspace} 
+% % Add a period to the end of an abbreviation unless there's one 
+% % already, then \xspace. 
+
+\makeatletter
+\DeclareRobustCommand\onedot{\futurelet\@let@token\@onedot}
+\def\@onedot{\ifx\@let@token.\else.\null\fi\xspace} 
+\def\eg{\emph{e.g}\onedot}
+\def\Eg{\emph{E.g}\onedot} 
+\def\ie{\emph{i.e}\onedot} 
+\def\Ie{\emph{I.e}\onedot}
+\def\cf{\emph{c.f}\onedot} 
+\def\Cf{\emph{C.f}\onedot}
+\def\etc{\emph{etc}\onedot} 
+\def\vs{\emph{vs}\onedot} 
+\def\wrt{w.r.t\onedot}
+\def\dof{d.o.f\onedot} 
+\def\etal{\emph{et al}\onedot} 
+\makeatother
+
+%* ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+
 % 双栏布局最后一行对齐
 %\usepackage{flushend}
 
 
 % 引用显示为红色
-% \usepackage[colorlinks,linkcolor=red,anchorcolor=red,citecolor=red]{hyperref}
-% \usepackage[numbers,sort&compress]{natbib} 
+\usepackage[colorlinks,linkcolor=red,anchorcolor=red,citecolor=red]{hyperref}
+\usepackage[numbers,sort&compress]{natbib} 
 
 
 % *管理缩略语
@@ -315,8 +341,6 @@
 % \do\o\do\p\do\q\do\r\do\s\do\t\do\u\do\v\do\w\do\x\do\y\do\z
 % \do\.\do\@\do\\\do\/\do\!\do\_\do\|\do\;\do\>\do\]\do\)\do\,
 % \do\?\do\'\do+\do\=\do\#}
-
-
 
 
 
